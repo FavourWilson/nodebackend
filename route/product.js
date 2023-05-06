@@ -1,3 +1,9 @@
 const express = require("express")
 
-contt router = express.Router
+const router = express.Router()
+
+router.get("/products", async (req, res) => {
+
+})
+
+module.exports = router
