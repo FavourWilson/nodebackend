@@ -1,17 +1,12 @@
 const express = require('express')
 const app = express()
 const PORT = 5000;
-
-const ProductRoute = require("./route/product")
-
+const productRoute = require("./route/productRoute");
+const mongoose = require("mongoose");
 
 mongoose.connect(
   `mongodb+srv://freecoder:<password>@cluster0.pvvqq.mongodb.net/?retryWrites=true&w=majority`, 
-  {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true
-  }
+  
 );
 
 const db = mongoose.connection;
@@ -20,6 +15,6 @@ db.once("open", function () {
   console.log("Connected successfully");
 });
 
-app.use("/api", ProductRoute)
+app.use("/api/products", productRoute)
 
 app.listen(PORT,() => console.log('Server is working ==> ${PORT}')) 
