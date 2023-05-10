@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const PORT = 5000;
+const PORT = 8000;
 const productRoute = require("./route/productRoute");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -8,6 +8,7 @@ const cors = require("cors");
 var corsOptions = {
   origin: "http://localhost:8081"
 };
+
 
 mongoose.connect(
   `mongodb+srv://freecoder:0trYQtpyQooURumu@cluster0.pvvqq.mongodb.net/?retryWrites=true&w=majority`, 
