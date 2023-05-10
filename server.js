@@ -10,7 +10,7 @@ var corsOptions = {
 };
 
 mongoose.connect(
-  `mongodb+srv://freecoder:<password>@cluster0.pvvqq.mongodb.net/?retryWrites=true&w=majority`, 
+  `mongodb+srv://freecoder:0trYQtpyQooURumu@cluster0.pvvqq.mongodb.net/?retryWrites=true&w=majority`, 
   
 );
 
