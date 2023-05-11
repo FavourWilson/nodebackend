@@ -18,8 +18,6 @@ const upload = multer({ storage: storage });
 
 router.post('/', upload.single('prodImage'), async (req, res) => {
   try {
-    // handle file upload using multer middleware
-
     const { prodName, prodPrice } = req.body;
     const prodImage = req.file.path;
 
