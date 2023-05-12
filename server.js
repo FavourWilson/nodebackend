@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser');
+// const path = require('path');
 const app = express()
 const PORT = 8000;
 const productRoute = require("./route/productRoute");
@@ -22,6 +23,7 @@ db.once("open", function () {
 app.use(cors());
 
 
+// app.use('/api/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(express.json());
