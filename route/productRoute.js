@@ -51,7 +51,7 @@ router.post('/', upload.single('prodImage'), async (req, res) => {
 )
 
 
-router.get("/", upload.single('prodImage'), async (req, res) => {
+router.get("/",  async (req, res) => {
     try {
         const products = 
             await Products.find({});
